@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #303030;
+    color: #fff;
+    font-family: 'Ubuntu';
+}
+.container{
+    max-width: 1535px;
+    margin:0 auto;
+    padding: 0 15px;
+}
+.header{
+    width: 100%;
+    left: 0;
+    top: 0;
+    
+    padding-top: 85px;
+    &-inner{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    &-descr{
+        margin-left: 25%;
+        & p{
+            font-size: 30px;
+            text-transform: uppercase;
+            color: #b4b4b4;
+            font-weight: 300;
+            margin-top: 25px;
+        }
+    }
+}
+.intro{
+    margin-top: 95px;
+    &-img{
+        display: flex;
+        justify-content: center;
+    }
+    &-burger{
+        width: 82px;
+        height: 82px;
+        border: 1px solid #454545;
+        position: relative;
+        padding: 0 15px;
+        cursor: pointer;
+        & span{
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: #b4b4b4;
+            &:nth-child(1){
+                top: 20px;
+            }
+            &:nth-child(2){
+                top: 40px;
+            }
+            &:nth-child(3){
+                top: 60px;
+            }
+        }
+    }
+    &-title {
+        & h4{
+            font-size: 60px;
+            font-weight: 300;
+            text-transform: uppercase;
+            text-align: center;
+            background: radial-gradient(circle at 40px 40px, #636363, #bd9446, #636363);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    &-scroll-btn{
+        display: flex;
+        margin-top: 165px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.scroll-btn-text{
+    & p{
+        font-weight: 400;
+        font-size: 20px;
+        color: #454545;
+        text-transform: uppercase;
+    }
+}
+.burger-wrapper{
+    display: flex;
+    justify-content: flex-end;
+}
+.scroll-arrow{
+    cursor: pointer;
+    margin-top: 10px;
+    animation: arrow-animate 2s infinite;
+}
+@keyframes arrow-animate{
+    0%{
+        transform: translateY(10%);
+    }
+    50%{
+        transform: translateY(35%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
